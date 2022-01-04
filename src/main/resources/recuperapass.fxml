@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="320.0" style="-fx-background-color: beige;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ControllerRecuperoPass">
+   <children>
+      <GridPane alignment="CENTER" layoutY="-2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="79.0" />
+          <ColumnConstraints halignment="CENTER" maxWidth="160.0" minWidth="10.0" prefWidth="159.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="101.0" minWidth="10.0" prefWidth="82.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="49.0" minHeight="10.0" prefHeight="49.0" />
+        </rowConstraints>
+         <children>
+            <PasswordField fx:id="password2" alignment="CENTER" promptText="Riscrivi Password" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Button maxHeight="25.0" maxWidth="122.0" minHeight="25.0" minWidth="62.0" mnemonicParsing="false" onAction="#Recupera_Pass" prefHeight="25.0" prefWidth="62.0" style="-fx-background-radius: 30;" text="Recupera" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <PasswordField fx:id="password" alignment="CENTER" promptText="Password" style="-fx-background-radius: 30;" GridPane.columnIndex="1" GridPane.valignment="BOTTOM" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

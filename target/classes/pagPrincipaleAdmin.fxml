@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="650.0" minWidth="900.0" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AdminMainPage_Controller">
+   <children>
+      <Pane layoutX="20.0" layoutY="90.0" opacity="0.12" prefHeight="540.0" prefWidth="184.0" style="-fx-background-color: BLACK; -fx-background-radius: 30;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="90.0" />
+      <GridPane prefHeight="44.0" prefWidth="900.0" style="-fx-background-color: ffc761; -fx-background-radius: 30;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="20.0">
+        <columnConstraints>
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="652.0" minWidth="10.0" prefWidth="253.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="429.0" minWidth="10.0" prefWidth="385.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="76.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <MenuBar prefHeight="52.0" prefWidth="712.0" style="-fx-background-color: ffc761;" GridPane.columnIndex="1">
+              <menus>
+                <Menu mnemonicParsing="false" style="-fx-font-size: 20;" text="Tickets">
+                  <items>
+                    <MenuItem fx:id="createTicketButton" mnemonicParsing="false" onAction="#addNewTicket" style="fx-font-size: 15;" text="Crea Ticket" />
+                        <MenuItem fx:id="showAllTicketsButton" mnemonicParsing="false" onAction="#showAllTickets" style="fx-font-size: 15;" text="Mostra tutti i ticket" />
+                        <MenuItem mnemonicParsing="false" style="fx-font-size: 15;" text="Chiudi" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" style="-fx-font-size: 20;" text="Impostazioni">
+                     <items>
+                        <MenuItem fx:id="changePasswordButton" mnemonicParsing="false" onAction="#changePassword" style="fx-font-size: 15;" text="Cambia Password" />
+                        <MenuItem fx:id="PersonalInformationButton" mnemonicParsing="false" onAction="#showPersonalInformation" style="fx-font-size: 15;" text="Informazioni Personali" />
+                        <MenuItem fx:id="CloseButton" mnemonicParsing="false" style="fx-font-size: 15;" text="Chiudi" />
+                     </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+            <Hyperlink fx:id="refreshPageLink" onAction="#refreshPage" prefHeight="35.0" prefWidth="36.0" style="-fx-border-color: transparent;" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+               <graphic>
+                  <FontAwesomeIconView glyphName="REFRESH" size="30" />
+               </graphic>
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin></Hyperlink>
+            <JFXToggleButton fx:id="button_setDark_Mode" onAction="#setDarkMode" text="." toggleColor="#ae660e" toggleLineColor="#cd7730" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="40.0" />
+               </GridPane.margin>
+            </JFXToggleButton>
+         </children>
+      </GridPane>
+      <GridPane layoutX="26.0" layoutY="93.0" prefHeight="525.0" prefWidth="176.0" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="93.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="236.0" minHeight="10.0" prefHeight="232.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+          <RowConstraints fillHeight="false" minHeight="71.0" prefHeight="71.0" vgrow="NEVER" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#logOut" prefHeight="33.0" prefWidth="155.0" style="-fx-background-radius: 30;" text="Logout" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <GridPane GridPane.rowIndex="4">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Hyperlink fx:id="helpLink" cacheShape="false" centerShape="false" focusTraversable="false" onAction="#helpAdmin" prefHeight="42.0" prefWidth="77.0" scaleShape="false" text="Help" textFill="#110202" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="QUESTION" />
+                     </graphic>
+                  </Hyperlink>
+               </children>
+            </GridPane>
+            <GridPane layoutX="10.0" layoutY="439.0" GridPane.rowIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Hyperlink fx:id="showProjectLink" alignment="CENTER" cacheShape="false" centerShape="false" focusTraversable="false" onAction="#showProject" prefHeight="42.0" prefWidth="157.0" scaleShape="false" text="Info Progetto" textFill="#070101" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="QUESTION" size="20" />
+                     </graphic>
+                  </Hyperlink>
+               </children>
+            </GridPane>
+            <GridPane layoutX="10.0" layoutY="339.0" GridPane.rowIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Hyperlink fx:id="newTicketLink" cacheShape="false" centerShape="false" focusTraversable="false" onAction="#addNewTicketShort" prefHeight="42.0" prefWidth="138.0" scaleShape="false" text="Nuovo Ticket" textFill="#0d0303" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="PLUS" />
+                     </graphic>
+                  </Hyperlink>
+               </children>
+            </GridPane>
+            <Circle fx:id="propic" fill="DODGERBLUE" radius="72.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin></Circle>
+            <Hyperlink fx:id="bottoneSuFoto" onAction="#setPropic" prefHeight="95.0" prefWidth="104.0" style="-fx-background-color: transparent;" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Hyperlink alignment="CENTER" cacheShape="false" centerShape="false" focusTraversable="false" onAction="#closeProject" prefHeight="42.0" prefWidth="181.0" scaleShape="false" text="Chiudi Progetto" textFill="#070101" GridPane.rowIndex="3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView glyphName="SEND" size="20" />
+               </graphic>
+            </Hyperlink>
+         </children>
+      </GridPane>
+      <GridPane layoutX="211.0" layoutY="90.0" prefHeight="540.0" prefWidth="655.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="90.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="540.0" minHeight="10.0" prefHeight="540.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="381.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane opacity="0.12" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: BLACK; -fx-background-radius: 30;" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+            </Pane>
+            <Pane opacity="0.12" prefHeight="471.0" prefWidth="298.0" style="-fx-background-color: BLACK; -fx-background-radius: 30;">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+            </Pane>
+            <ImageView fitHeight="303.0" fitWidth="263.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@PlusSymbol.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="346.0" fitWidth="271.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@PlusSymbol.png" />
+               </image>
+            </ImageView>
+            <PieChart fx:id="ticket_Aperti_chiusi" title="Ticket Aperti/Chiusi">
+               <GridPane.margin>
+                  <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+               </GridPane.margin>
+            </PieChart>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.infoTicket_Controller">
+   <children>
+      <GridPane layoutY="6.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="108.0" minHeight="10.0" prefHeight="86.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="205.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="197.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="239.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="186.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="186.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="186.0" minHeight="10.0" prefHeight="66.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="TICKET ID" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DESCRIZIONE TICKET" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ASSEGNATO A" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PROJECT MANAGER:" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PRIORITÀ" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="NomeTicket" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <TextArea fx:id="Descizione_Ticket" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </GridPane.margin></TextArea>
+            <Text fx:id="Project_Manager" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="assignedTo" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="296.515625" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="priority" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PROGETTO ASSOCIATO" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="associatedProject" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="TICKET STATO" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="ticketStatus" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ORE TOTALI LOGGATE" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="loggedTime" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
